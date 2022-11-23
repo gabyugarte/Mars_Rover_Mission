@@ -9,7 +9,7 @@ class RoversUnitTest(unittest.TestCase):
         # Prepare and run Rover One on 5 5 plateau
         rover = Rover(8, 8)
         rover.setstart('1 2 E')
-        rover.setoperations('MMLMRMMRRMML')
+        rover.setoperations('FFLFRFFRRFFL')
         rover.operate()
         output1 = rover.getposition()
         expected1 = "3 3 S"
@@ -20,7 +20,7 @@ class RoversUnitTest(unittest.TestCase):
         # Prepare and run Rover Two on 5 5 plateau
         rover = Rover(5, 5)
         rover.setstart('3 3 E')
-        rover.setoperations('MMRMMRMRRM')
+        rover.setoperations('FFRFFRFRRF')
         rover.operate()
         # Get rover outputs
         output2 = rover.getposition()
@@ -34,10 +34,10 @@ class RoversUnitTest(unittest.TestCase):
         rover = Rover(5, 5)
         self.assertRaises(Exception, rover.setoperations, str("MMRMKLMMLM"))    # invalid character in commands
         rover.setstart('1 1 N')                                     # start the rover at 1 1
-        rover.setoperations('MMMMMM')                               # move the rover out of bounds positively
+        rover.setoperations('FFFFFF')                               # move the rover out of bounds positively
         self.assertRaises(Exception, rover.operate)                 # execute the operation and throw an error
         rover.setstart('1 1 S')                                     # start the rover at 1 1 facing south
-        rover.setoperations('MMM')                                  # move 3 spaces down
+        rover.setoperations('FFF')                                  # move 3 spaces down
         self.assertRaises(Exception, rover.operate)                 # check for a negative exception
 
     # Test that an exception is raised if the plateau input has additional or incorrect parameters
