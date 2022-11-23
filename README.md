@@ -2,10 +2,12 @@
 Technical challenge - Python
 # Mars Rover Mission 2022
 
+Your Task
 You’re part of the team that explores Mars by sending remotely controlled vehicles to the surface
 of the planet. Develop a software that translates the commands sent from earth to instructions
 that are understood by the rover.
 Requirements
+
 ● You are given the initial starting point (x,y) of a rover and the direction (N,S,E,W)
 it is facing.
 ● The rover receives a collection of commands. (E.g.) FFRRFFFRL
@@ -15,6 +17,10 @@ it is facing.
 ● Implement obstacle detection before each move to a new square. If a given
 sequence of commands encounters an obstacle, the rover moves up to the last
 possible point, aborts the sequence and reports the obstacle.
+
+Take into account
+
+● Rovers are expensive, make sure the software works as expected.
 ## Usage
 Run the program with `python rover.py`  
   
@@ -23,7 +29,7 @@ Enter the plateau's maximum coordinates in 'X Y' format
 `> 9 9`  
 Enter the Rover's start coordinates and heading in 'X Y H' format:  
 `> 2 4 E`  
-Enter the Rover's instructions consisting of L, R and M in a string:  
+Enter the Rover's instructions consisting of L, R and F in a string:  
 `> FFFRLFF`  
 **Final Output**  
 `> 7 4 E`  
